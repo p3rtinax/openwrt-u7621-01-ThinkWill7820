@@ -117,6 +117,7 @@ ramips_setup_interfaces()
 	sk-wb8|\
 	telco-electronics,x1|\
 	totolink,lr1200|\
+	unielec,u7621-01-256m-16m|\
 	unielec,u7621-06-256m-16m|\
 	unielec,u7621-06-512m-64m|\
 	vr500|\

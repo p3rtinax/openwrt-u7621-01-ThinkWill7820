@@ -507,6 +507,16 @@ define Device/ubnt-erx-sfp
 endef
 TARGET_DEVICES += ubnt-erx-sfp
 
+define Device/unielec_u7621-01-256m-16m
+  DTS := U7621-01-256M-16M
+  IMAGE_SIZE := 16064k
+  DEVICE_TITLE := UniElec U7621-01 (256M RAM/16M flash)
+  DEVICE_PACKAGES := \
+    kmod-mt7603 kmod-mt76x2 kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport wpad-basic
+  SUPPORTED_DEVICES += u7621-01-256M-16M
+endef
+TARGET_DEVICES += unielec_u7621-01-256m-16m
+
 define Device/unielec_u7621-06-256m-16m
   DTS := U7621-06-256M-16M
   IMAGE_SIZE := 16064k
