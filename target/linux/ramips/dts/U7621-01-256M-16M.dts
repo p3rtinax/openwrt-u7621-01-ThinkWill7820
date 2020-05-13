@@ -40,7 +40,7 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "unielec,u7621-01-256m-16m", "unielec,u7621-06", "mediatek,mt7621-soc";
+	compatible = "unielec,u7621-01-256m-16m", "mediatek,mt7621-soc";
 	model = "UniElec U7621-01 (256M RAM/16M flash)";
 
 	memory@0 {
@@ -62,14 +62,22 @@
 		};
 	};
 
-	gpio-keys-polled {
-		compatible = "gpio-keys-polled";
-		poll-interval = <20>;
+	leds {
+		compatible = "gpio-leds";
+		
+		led_status: status {
+			label = "u7621-01:green:status";
+			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+		};
 
-		reset {
-			label = "reset";
-			gpios = <&gpio0 18 GPIO_ACTIVE_LOW>;
-			linux,code = <KEY_RESTART>;
+		led4 {
+			label = "u7621-01:green:led4";
+			gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+		};
+
+		led5 {
+			label = "u7621-01:green:led5";
+			gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
 		};
 	};
 };
