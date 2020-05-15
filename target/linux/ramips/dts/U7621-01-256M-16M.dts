@@ -61,25 +61,6 @@
 			default-state = "on";
 		};
 	};
-
-	leds {
-		compatible = "gpio-leds";
-		
-		led_status: status {
-			label = "u7621-01:green:status";
-			gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-		};
-
-		led4 {
-			label = "u7621-01:green:led4";
-			gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
-		};
-
-		led5 {
-			label = "u7621-01:green:led5";
-			gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
-		};
-	};
 };
 
 &spi0 {
