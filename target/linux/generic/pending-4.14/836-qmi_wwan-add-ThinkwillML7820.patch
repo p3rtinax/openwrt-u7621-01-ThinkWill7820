@@ -32,3 +32,19 @@
  	{ USB_DEVICE_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0x0414, 0xff, 0xff, 0xff) },
  	{ USB_DEVICE_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0x0417, 0xff, 0xff, 0xff) },
  	{ USB_DEVICE_INTERFACE_CLASS(ZTE_VENDOR_ID, 0x0601, 0xff) },	/* GosunCn ZTE WeLink ME3630 (RNDIS mode) */
+--- a/drivers/net/usb/cdc_ether.c
++++ b/drivers/net/usb/cdc_ether.c
+@@ -735,6 +735,13 @@ static const struct usb_device_id	produc
+ 	.driver_info = 0,
+ },
+ 
++/* Thinkwill ML7820+ 4G LTE - handled by qmi_wwan */
++{
++	USB_DEVICE_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0x0532, USB_CLASS_COMM,
++			USB_CDC_SUBCLASS_ETHERNET, USB_CDC_PROTO_NONE),
++	.driver_info = 0,
++},
++
+ /* Realtek RTL8152 Based USB 2.0 Ethernet Adapters */
+ {
+ 	USB_DEVICE_AND_INTERFACE_INFO(REALTEK_VENDOR_ID, 0x8152, USB_CLASS_COMM,
