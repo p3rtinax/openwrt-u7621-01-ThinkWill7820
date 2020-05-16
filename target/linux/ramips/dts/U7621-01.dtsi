@@ -39,14 +39,7 @@
 
 / {
 	compatible = "unielec,u7621-01", "mediatek,mt7621-soc";
-
-	aliases {
-		led-boot = &led_status;
-		led-failsafe = &led_status;
-		led-running = &led_status;
-		led-upgrade = &led_status;
-	};
-
+	
 	chosen {
 		bootargs = "console=ttyS0,57600";
 	};
@@ -61,14 +54,14 @@
 			gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
 			default-state = "on";
 		};
-
+		
 		modem_reset {
 			gpio-export,name = "modem_reset";
 			gpio-export,output = <1>;
 			gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
 		};
 	};
-
+	
 	keys {
 		compatible = "gpio-keys-polled";
 		poll-interval = <20>;
