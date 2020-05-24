@@ -296,6 +296,16 @@ define Device/timecloud
 endef
 TARGET_DEVICES += timecloud
 
+define Device/unielec_u7621-01-256m-16m
+  DTS := U7621-01-256M-16M
+  IMAGE_SIZE := 16064k
+  DEVICE_TITLE := UniElec U7621-01 (256M RAM/16M flash)
+  DEVICE_PACKAGES := \
+    kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-mini
+  SUPPORTED_DEVICES += u7621-01-256M-16M
+endef
+TARGET_DEVICES += u7621-01-256M-16M
+
 define Device/u7621-06-256M-16M
   DTS := U7621-06-256M-16M
   IMAGE_SIZE := 16064k
