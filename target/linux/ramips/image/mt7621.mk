@@ -296,7 +296,7 @@ define Device/timecloud
 endef
 TARGET_DEVICES += timecloud
 
-define Device/unielec_u7621-01-256m-16m
+define Device/u7621-01-256M-16M
   DTS := U7621-01-256M-16M
   IMAGE_SIZE := 16064k
   DEVICE_TITLE := UniElec U7621-01 (256M RAM/16M flash)
